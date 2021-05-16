@@ -13,15 +13,19 @@
                     <h1>Calcula IMC</h1>
                     <hr>
                 </header>
-                <div class="peso">
-                    <label>Peso (kg)</label>
-                    <input type="number" min="0" placeholder="ex: 60.5" required></input>
-                </div>
-                <div class="altura">
-                    <label>Altura (m)</label>
-                    <input type="number" min="0" placeholder="ex: 1.70" required></input>
-                </div>
-                <button>Calcular</button>
+                <article>
+                    <div class="peso">
+                        <label>Peso (kg)</label>
+                        <input type="number" min="0" id="peso" value="0" step=".1"></input>
+                    </div>
+                    <div class="altura">
+                        <label>Altura (m)</label>
+                        <input type="number" min="0" id="altura" value="0" step=".01"></input>
+                    </div>
+                </article>
+                <footer>
+                    <button onclick="CalculaImc(); ExibeClassificao();">Calcular</button>
+                </footer>
             </fieldset>
         </form>
     </body>
