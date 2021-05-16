@@ -18,7 +18,7 @@ fieldset {
     border-radius: 10px;
     background-color: #3d1f5a;
     border: 0;
-    box-shadow: 15px 15px 3px rgba(0, 0, 0, 0.233);
+    box-shadow: 18px 18px 2px #0000003b;
     height: 500px;
 }
 
@@ -28,6 +28,7 @@ h1 {
 }
 
 label {
+    position: relative;
     text-align: center;
     font-size: 30px;
     display: block;
@@ -37,13 +38,13 @@ label {
 
 input {
     position: relative;
-    width: 200px;
-    height: 30px;
+    width: 150px;
+    height: 40px;
     left: 50%;
     transform: translateX(-50%);
     margin: 5px auto;
     text-align: center;
-    border: 2px solid rgba(255, 255, 255, 0.466);
+    border: 2px solid #ffffff77;
     border-radius: 10px;
     background-color: #50346e;
     color: white;
@@ -56,16 +57,19 @@ input {
 button {
     position: relative;
     width: 150px;
-    top: 15%;
     left: 50%;
-    transform: translate(-50%, -15%);
+    margin-top: 50px;
+    transform: translateX(-50%);
     background-color: #50346e;
     color: white;
-    border: 2px solid  rgba(255, 255, 255, 0.466);
+    border: 2px solid  #ffffff77;
     border-radius: 20px;
-
     padding: 10px;
     font-size: 20px;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .peso, .altura {
