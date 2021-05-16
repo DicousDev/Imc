@@ -1,3 +1,5 @@
+const campoPeso = document.getElementById("peso");
+const campoAltura = document.getElementById("altura");
 var imc = 0;
 
 function ExibeClassificao() {
@@ -6,11 +8,8 @@ function ExibeClassificao() {
 }
 
 function CalculaImc() {
-    const campoPeso = document.getElementById("peso");
-    const campoAltura = document.getElementById("altura");
-
-    let peso = Number(campoPeso.value);
-    let altura = Number(campoAltura.value);
+    const peso = Number(campoPeso.value);
+    const altura = Number(campoAltura.value);
     imc = (peso / (altura ** 2)).toFixed(2);
 }
 
