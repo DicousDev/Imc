@@ -1,0 +1,44 @@
+var imc = 0;
+
+function ExibeClassificao() {
+    let classificao = ClassificaImc();
+    window.confirm(classificao);
+}
+
+function CalculaImc() {
+    const campoPeso = document.getElementById("peso");
+    const campoAltura = document.getElementById("altura");
+
+    let peso = Number(campoPeso.value);
+    let altura = Number(campoAltura.value);
+    imc = (peso / (altura ** 2)).toFixed(2);
+}
+
+function ClassificaImc() {
+    let messagemImc = "Seu IMC é " + imc + ".";
+
+    if(imc < 16) {
+        return messagemImc + "\n Você está com Magreza grave";
+    }
+    else if(imc < 17) {
+        return messagemImc + "\n Você está com Magreza moderada";
+    }
+    else if(imc < 18.5) {
+        return messagemImc + "\n Você está com Magreza leve";
+    }
+    else if(imc < 25) {
+        return messagemImc + "\n Você está saudável.";
+    }
+    else if(imc < 30) {
+        return messagemImc + "\n Você está Sobrepeso";
+    }
+    else if(imc < 35) {
+        return messagemImc + "\n Você está com Obesidade grau 1";
+    }
+    else if(imc < 40) {
+        return messagemImc + "\n Você está com Obesidade grau 2 (severa)";
+    }
+    else if(imc >= 40) {
+        return messagemImc + "\n Você está com Obesidade Grau 3 (mórbida)";
+    }
+}
