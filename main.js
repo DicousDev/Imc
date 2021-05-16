@@ -10,11 +10,11 @@ function ExibeClassificao() {
 function CalculaImc() {
     const peso = Number(campoPeso.value);
     const altura = Number(campoAltura.value);
-    imc = (peso / (altura ** 2)).toFixed(2);
+    imc = peso / (altura ** 2);
 }
 
 function ClassificaImc() {
-    let messagemImc = "Seu IMC é " + imc + ".";
+    let messagemImc = "Seu IMC é " + imc.toFixed(2) + ".";
 
     if(imc < 16) {
         return messagemImc + "\n Você está com Magreza grave";
