@@ -3,14 +3,17 @@ const campoAltura = document.getElementById("altura");
 var imc = 0;
 
 function ExibeClassificao() {
-    let classificao = ClassificaImc();
+    var classificao = ClassificaImc();
     window.confirm(classificao);
 }
 
 function CalculaImc() {
     const peso = Number(campoPeso.value);
     const altura = Number(campoAltura.value);
-    imc = peso / (altura ** 2);
+
+    if(altura != 0) {
+        imc = peso / (altura ** 2);
+    }
 }
 
 function ClassificaImc() {
