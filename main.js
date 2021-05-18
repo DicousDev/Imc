@@ -2,9 +2,10 @@ const campoPeso = document.getElementById("peso");
 const campoAltura = document.getElementById("altura");
 var imc = 0;
 
-function ExibeClassificao() {
+function ExibeImcComClassificao() {
+    var mensagemImc = "Seu IMC é " + imc.toFixed(2) + ".";
     var classificao = ClassificaImc();
-    window.confirm(classificao);
+    window.confirm(mensagemImc + "\n" + classificao);
 }
 
 function CalculaImc() {
@@ -17,30 +18,28 @@ function CalculaImc() {
 }
 
 function ClassificaImc() {
-    let messagemImc = "Seu IMC é " + imc.toFixed(2) + ".";
-
     if(imc < 16) {
-        return messagemImc + "\n Você está com Magreza grave";
+        return "Você está com Magreza grave.";
     }
     else if(imc < 17) {
-        return messagemImc + "\n Você está com Magreza moderada";
+        return "Você está com Magreza moderada.";
     }
     else if(imc < 18.5) {
-        return messagemImc + "\n Você está com Magreza leve";
+        return "Você está com Magreza leve.";
     }
     else if(imc < 25) {
-        return messagemImc + "\n Você está saudável.";
+        return "Você está saudável.";
     }
     else if(imc < 30) {
-        return messagemImc + "\n Você está Sobrepeso";
+        return "Você está Sobrepeso.";
     }
     else if(imc < 35) {
-        return messagemImc + "\n Você está com Obesidade grau 1";
+        return "Você está com Obesidade grau 1.";
     }
     else if(imc < 40) {
-        return messagemImc + "\n Você está com Obesidade grau 2 (severa)";
+        return "Você está com Obesidade grau 2 (severa).";
     }
     else if(imc >= 40) {
-        return messagemImc + "\n Você está com Obesidade Grau 3 (mórbida)";
+        return "Você está com Obesidade Grau 3 (mórbida).";
     }
 }
